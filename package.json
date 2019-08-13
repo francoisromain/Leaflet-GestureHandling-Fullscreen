@@ -1,0 +1,27 @@
+{
+  "name": "bug-leaflet-gesture-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francoisromain/Leaflet-GestureHandling-Fullscreen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francoisromain/Leaflet-GestureHandling-Fullscreen/issues"
+  },
+  "homepage": "https://github.com/francoisromain/Leaflet-GestureHandling-Fullscreen#readme",
+  "devDependencies": {
+    "leaflet": "^1.5.1",
+    "leaflet-fullscreen": "^1.0.2",
+    "leaflet-gesture-handling": "^1.1.8",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}

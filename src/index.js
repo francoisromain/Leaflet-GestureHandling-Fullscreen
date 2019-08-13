@@ -1,3 +1,8 @@
+import "leaflet";
+import { GestureHandling } from "leaflet-gesture-handling";
+import "leaflet-fullscreen";
+
+L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 // define map and tile layer
 const map = L.map("mapid", {
   doubleClickZoom: false,
