@@ -19,6 +19,8 @@
       type="text/css"
     />
     <script src="//unpkg.com/leaflet-gesture-handling"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
       #mapid {
         height: 400px;
@@ -29,7 +31,11 @@
     <h1>
       Leaflet.GestureHandling
     </h1>
-    <div id="mapid"></div>
+
+    <div id="app">
+      {{ message }}
+      <div id="mapid" ref="map"></div>
+    </div>
     <div></div>
     <script src="./scripts.js"></script>
   </body>
