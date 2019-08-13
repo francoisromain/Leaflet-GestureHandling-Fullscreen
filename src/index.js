@@ -5,15 +5,9 @@ import "leaflet-fullscreen";
 L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 // define map and tile layer
 const map = L.map("mapid", {
-  doubleClickZoom: false,
-  minZoom: 4,
   gestureHandling: true,
-  fullscreenControl: {
-    pseudoFullscreen: true
-  }
+  fullscreenControl: { pseudoFullscreen: true }
 }).setView([51.505, -0.09], 13);
-
-const scale = L.control.scale({ imperial: false });
 
 const tileLayer = L.tileLayer(
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -24,15 +18,20 @@ const tileLayer = L.tileLayer(
   }
 );
 
-scale.addTo(map);
 tileLayer.addTo(map);
 
 map.on("fullscreenchange", () => {
   if (map.isFullscreen()) {
     map.gestureHandling.disable();
-    console.log("entered fullscreen", map.gestureHandling.enabled());
+    console.log(
+      "entered fullscreen. map.gestureHandling.enabled: ",
+      map.gestureHandling.enabled()
+    );
   } else {
     map.gestureHandling.enable();
-    console.log("exited fullscreen", map.gestureHandling);
+    console.log(
+      "exited fullscreen. map.gestureHandling.enabled: ",
+      map.gestureHandling.enabled()
+    );
   }
 });

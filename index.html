@@ -6,13 +6,12 @@
     <title>Bug Leaflet.GestureHandling</title>
     <link rel="stylesheet" href="//unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
     <link
-      href="//unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css"
       rel="stylesheet"
+      href="//unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css"
     />
     <link
       rel="stylesheet"
       href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
-      type="text/css"
     />
     <style>
       #mapid {
@@ -24,8 +23,35 @@
     <h1>
       Leaflet.GestureHandling
     </h1>
+    <h2>
+      <a href="https://github.com/francoisromain/bug-leaflet-gesture-handling"
+        >Source code on Github</a
+      >
+      |
+      <a href="https://github.com/elmarquis/Leaflet.GestureHandling/issues/31"
+        >Issue on Github</a
+      >
+    </h2>
     <div id="mapid"></div>
-    <div></div>
+    <div>
+      <h2>How to reproduce the bug?</h2>
+      <hr />
+      <ol>
+        <li>
+          Click on the fullscreen button
+        </li>
+        <li>
+          Try to zoom-in or zoom-out with the mousewheel or trackpad.
+        </li>
+      </ol>
+      <p>
+        The bug: in fullscreen `Leaflet.GestureHandling` is still enabled.
+      </p>
+      <p>
+        What is expected: in fullscreen `Leaflet.GestureHandling` should be
+        disabled.
+      </p>
+    </div>
     <script src="./dist/main.js"></script>
   </body>
 </html>
